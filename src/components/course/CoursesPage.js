@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import * as courseActions from '../../actions/courseActions';
 
 // Container component
@@ -27,7 +28,7 @@ class CoursesPage extends React.Component {
   }
   onClickSave() {
     // depends on mapDispatchToProps
-    this.props.createCourse(this.state.course);
+    this.props.actions.createCourse(this.state.course);
   }
 
   courseRow(course, index) {
@@ -54,7 +55,7 @@ class CoursesPage extends React.Component {
 
 CoursesPage.propTypes = {
   courses: PropTypes.array.isRequired,
-  createCourse: PropTypes.func.isRequired
+  actions: PropTypes.object.isRequired
 };
 
 // returns properties we want to see exposed on CoursesPath component
@@ -68,8 +69,10 @@ function mapStateToProps(state, ownProps) {
 // dispatch comes from redux
 function mapDispatchToProps(dispatch) {
   return {
-    // wrap action with call to dispatch
-    createCourse: course => dispatch(courseActions.createCourse(course))
+    // bindActionCreators is convience function that wraps action with call to dispatch
+    actions: bindActionCreators(courseActions, dispatch)
+    // another option:
+    // createCourse: bindActionCreators(courseActions.createCourse, dispatch)
   };
 }
 

@@ -11,6 +11,8 @@ class CoursesPage extends React.Component {
     };
 
     // ES6 requires explicit binding to ensure correct 'this'
+    // bind this of onTitleChange&onClickSave to the this of Courses page context
+    // bind here and not in event handlers for performance; (bind defines new function)
     this.onTitleChange = this.onTitleChange.bind(this);
     this.onClickSave = this.onClickSave.bind(this);
   }
@@ -20,7 +22,6 @@ class CoursesPage extends React.Component {
     course.title = event.target.value;
     this.setState({course: course});
   }
-  // state undefined.  'this' is wrong.  ES6 doesn't autobind.
   onClickSave() {
     alert(`Saving course: ${this.state.course.title}`)
   }

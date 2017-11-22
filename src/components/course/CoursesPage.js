@@ -26,10 +26,8 @@ class CoursesPage extends React.Component {
     this.setState({course: course});
   }
   onClickSave() {
-    // alert(`Saving course: ${this.state.course.title}`);
-    // due to ommision of mapDispatchToProps param in connect
-    // dispatch is injected by react-redux
-    this.props.dispatch(courseActions.createCourse(this.state.course));
+    // depends on mapDispatchToProps
+    this.props.createCourse(this.state.course);
   }
 
   courseRow(course, index) {
@@ -55,8 +53,8 @@ class CoursesPage extends React.Component {
 }
 
 CoursesPage.propTypes = {
-  dispatch: PropTypes.func.isRequired,
-  courses: PropTypes.array.isRequired
+  courses: PropTypes.array.isRequired,
+  createCourse: PropTypes.func.isRequired
 };
 
 // returns properties we want to see exposed on CoursesPath component
@@ -67,6 +65,14 @@ function mapStateToProps(state, ownProps) {
   };
 }
 
+// dispatch comes from redux
+function mapDispatchToProps(dispatch) {
+  return {
+    // wrap action with call to dispatch
+    createCourse: course => dispatch(courseActions.createCourse(course))
+  };
+}
+
 // connect is higher order function
-// export default connect(mapStateToProps, mapDispatchToProps)(CoursesPage);
-export default connect(mapStateToProps)(CoursesPage);
+// if mapDispatchToProps is defined connect will NOT attach a dispatch property to component
+export default connect(mapStateToProps, mapDispatchToProps)(CoursesPage);

@@ -1,5 +1,8 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
+import { connect } from 'react-redux';
+import * as courseActions from '../../actions/courseActions';
 
+// Container component
 class CoursesPage extends React.Component {
   // create new course form; component container
   constructor(props, context) {
@@ -23,12 +26,20 @@ class CoursesPage extends React.Component {
     this.setState({course: course});
   }
   onClickSave() {
-    alert(`Saving course: ${this.state.course.title}`)
+    // alert(`Saving course: ${this.state.course.title}`);
+    // due to ommision of mapDispatchToProps param in connect
+    // dispatch is injected by react-redux
+    this.props.dispatch(courseActions.createCourse(this.state.course));
+  }
+
+  courseRow(course, index) {
+    return <div key={index}>{course.title}</div>;
   }
   render() {
     return (
       <div>
         <h1>Courses</h1>
+        {this.props.courses.map(this.courseRow)}
         <h2>Add Course</h2>
         <input
         type="text"
@@ -43,4 +54,19 @@ class CoursesPage extends React.Component {
   }
 }
 
-export default CoursesPage;
+CoursesPage.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+  courses: PropTypes.array.isRequired
+};
+
+// returns properties we want to see exposed on CoursesPath component
+function mapStateToProps(state, ownProps) {
+  return {
+    // access courses from redux store
+    courses: state.courses
+  };
+}
+
+// connect is higher order function
+// export default connect(mapStateToProps, mapDispatchToProps)(CoursesPage);
+export default connect(mapStateToProps)(CoursesPage);

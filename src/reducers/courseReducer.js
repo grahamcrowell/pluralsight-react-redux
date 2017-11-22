@@ -1,3 +1,6 @@
+import * as types from '../actions/actionTypes';
+
+
 // handles action
 // reducer is a function that excepts a state and an action and
 // then returns a new state
@@ -6,7 +9,7 @@
 export default function courseReducer(state = [], action) {
   // defaults params part of ES6
   switch (action.type) {
-    case 'CREATE_COURSE':
+    case types.CREATE_COURSE:
       // RECALL: state is immutable
       // [... ] ES6 spread operator
       return [

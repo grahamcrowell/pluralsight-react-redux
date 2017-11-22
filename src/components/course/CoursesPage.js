@@ -5,7 +5,7 @@ import * as courseActions from '../../actions/courseActions';
 
 // Container component
 class CoursesPage extends React.Component {
-  // create new course form; component container
+  // constructor initializes state
   constructor(props, context) {
     super(props, context);
 
@@ -20,7 +20,8 @@ class CoursesPage extends React.Component {
     this.onTitleChange = this.onTitleChange.bind(this);
     this.onClickSave = this.onClickSave.bind(this);
   }
-  // called on each key stroke, updates state.
+
+  // called on each key stroke, updates local state.
   onTitleChange(event){
     const course = this.state.course;
     course.title = event.target.value;
@@ -30,10 +31,13 @@ class CoursesPage extends React.Component {
     // depends on mapDispatchToProps
     this.props.actions.createCourse(this.state.course);
   }
-
+  // called by render to display course list
   courseRow(course, index) {
     return <div key={index}>{course.title}</div>;
   }
+
+  // container components should not include UI
+  // should only pass state to "dumb" child components
   render() {
     return (
       <div>
@@ -41,18 +45,19 @@ class CoursesPage extends React.Component {
         {this.props.courses.map(this.courseRow)}
         <h2>Add Course</h2>
         <input
-        type="text"
-        onChange={this.onTitleChange} // calls function above
-        value={this.state.course.title} />
+          type="text"
+          onChange={this.onTitleChange} // calls function above
+          value={this.state.course.title} />
         <input
-        type="submit"
-        onClick={this.onClickSave} // calls function above
-        value="Save" />
+          type="submit"
+          onClick={this.onClickSave} // calls function above
+          value="Save" />
       </div>
     );
   }
 }
 
+// prop types for validation
 CoursesPage.propTypes = {
   courses: PropTypes.array.isRequired,
   actions: PropTypes.object.isRequired
@@ -66,7 +71,7 @@ function mapStateToProps(state, ownProps) {
   };
 }
 
-// dispatch comes from redux
+// dispatch comes from connect wrapper
 function mapDispatchToProps(dispatch) {
   return {
     // bindActionCreators is convience function that wraps action with call to dispatch

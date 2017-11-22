@@ -9,15 +9,9 @@ import * as types from '../actions/actionTypes';
 export default function courseReducer(state = [], action) {
   // defaults params part of ES6
   switch (action.type) {
-    case types.CREATE_COURSE:
-      // RECALL: state is immutable
-      // [... ] ES6 spread operator
-      return [
-        ...state, // returns new instance of state array
-        // Object.assign creates deep copy of course
-        Object.assign({}, action.course)
-        // return new state via the action that was passed in
-      ];
+    case types.LOAD_COURSES_SUCCESS:
+      // return state from Api
+      return action.courses;
 
       // reducer doesn't handle this action then just return state
     default:

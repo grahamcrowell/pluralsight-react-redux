@@ -7,8 +7,12 @@ class CoursesPage extends React.Component {
 
     // set local state
     this.state = {
-      course: {title: null}
+      course: {title: ""} // input can't be null => use ""
     };
+
+    // ES6 requires explicit binding to ensure correct 'this'
+    this.onTitleChange = this.onTitleChange.bind(this);
+    this.onClickSave = this.onClickSave.bind(this);
   }
   // called on each key stroke, updates state.
   onTitleChange(event){
@@ -16,6 +20,7 @@ class CoursesPage extends React.Component {
     course.title = event.target.value;
     this.setState({course: course});
   }
+  // state undefined.  'this' is wrong.  ES6 doesn't autobind.
   onClickSave() {
     alert(`Saving course: ${this.state.course.title}`)
   }

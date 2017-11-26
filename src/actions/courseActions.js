@@ -1,5 +1,6 @@
 import * as types from './actionTypes';
 import courseApi from '../api/mockCourseApi';
+import { beginAjaxCall, ajaxCallError } from './ajaxStatusActions';
 
 /*
  * ACTION CREATORS
@@ -30,8 +31,7 @@ export function createCourseSuccess(course) {
 // thunks always returns function that accepts a dispath
 export function loadCourses() {
 	return function(dispatch) {
-		// body of thunk
-		// call to mockApi returns a promise of list courses
+    dispatch(beginAjaxCall());
 		return courseApi.getAllCourses().then(courses => {
 			// dispatch action creator
 			dispatch(loadCoursesSuccess(courses));
@@ -46,8 +46,8 @@ export function loadCourses() {
 // thunks always returns function that accepts a dispath
 export function saveCourse(course) {
 	// getState param provides direct access to redux store (not used here, useful for larger applications)
-	// return function(dispatch, getState) {
-	return function(dispatch) {
+  return function(dispatch, getState) {
+    dispatch(beginAjaxCall());
 		// body of thunk
 		return courseApi.saveCourse(course).then(courses => {
 			// if input course has id then updating an existing course
@@ -57,6 +57,7 @@ export function saveCourse(course) {
 		})
 		// handle error by rethrowing up the stack
 		.catch(error => {
+      dispatch(ajaxCallError(error));
 			throw(error);
 		});
 	};

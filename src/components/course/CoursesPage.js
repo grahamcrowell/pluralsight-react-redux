@@ -11,12 +11,12 @@ class CoursesPage extends React.Component {
   constructor(props, context) {
     super(props, context);
     // bind function called by button "Add Course"
-    this.redirectToAddCoursesPage = this.redirectToAddCoursesPage.bind(this);
+    this.redirectToAddCoursePage = this.redirectToAddCoursePage.bind(this);
 
     // set local state
-    this.state = {
-      course: {title: ""} // input can't be null => use ""
-    };
+    // this.state = {
+      //course: {title: ""} // input can't be null => use ""
+    // };
 
   }
 
@@ -24,7 +24,7 @@ class CoursesPage extends React.Component {
     return <div key={index}>{course.title}</div>;
   }
 
-  redirectToAddCoursesPage() {
+  redirectToAddCoursePage() {
     browserHistory.push('/course');
   }
 
@@ -39,7 +39,7 @@ class CoursesPage extends React.Component {
         <input type="submit"
               value="Add Course"
               className="btn btn-primary"
-              onClick={this.redirectToAddCoursesPage}/>
+              onClick={this.redirectToAddCoursePage}/>
         <CourseList courses={courses}/>
       </div>
     );

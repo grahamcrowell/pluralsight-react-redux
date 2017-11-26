@@ -9,6 +9,7 @@ import {Provider} from 'react-redux';
 import './styles/styles.css'; // Webpack can import CSS files too
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import {loadCourses} from './actions/courseActions';
+import {loadAuthors} from './actions/authorActions';
 
 /*
 ENTRY POINT OF APP
@@ -21,6 +22,7 @@ const store = configureStore();
 // once store is configured, dispatch action(s) against store
 // fetch data from Api at page load time
 store.dispatch(loadCourses());
+store.dispatch(loadAuthors());
 
 render (
   // provider wraps whole app: store is accissble everywhere in app.

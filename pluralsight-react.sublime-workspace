@@ -1,0 +1,282 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fil",
+				"filter\t( callbackfn: Function, thisArg?: any ): Array Array"
+			],
+			[
+				"save",
+				"saveCourse"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Bash Build System/Bash.sublime-build",
+					""
+				],
+				[
+					"Packages/User/run_shell_script.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Bash Build System/Bash.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 354.0,
+		"last_filter": "insta",
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"mark",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 624.0
+	},
+	"console":
+	{
+		"height": 176.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/gcrowell/Documents/git/pluralsight-redux-starter",
+		"/Users/gcrowell/Documents/git/pluralsight-redux-starter/src",
+		"/Users/gcrowell/Documents/git/pluralsight-redux-starter/src/actions",
+		"/Users/gcrowell/Documents/git/pluralsight-redux-starter/src/components",
+		"/Users/gcrowell/Documents/git/pluralsight-redux-starter/src/components/about",
+		"/Users/gcrowell/Documents/git/pluralsight-redux-starter/src/components/common",
+		"/Users/gcrowell/Documents/git/pluralsight-redux-starter/src/components/course",
+		"/Users/gcrowell/Documents/git/pluralsight-redux-starter/src/reducers"
+	],
+	"file_history":
+	[
+		"/Users/gcrowell/Documents/git/pluralsight-redux-starter/src/components/course/CourseListRow.js",
+		"/Users/gcrowell/Documents/git/pluralsight-redux-starter/src/components/common/TextInput.js",
+		"/Users/gcrowell/Documents/git/pluralsight-redux-starter/src/components/common/SelectInput.js",
+		"/Users/gcrowell/Documents/git/pluralsight-redux-starter/src/components/course/ManageCoursePage.js",
+		"/Users/gcrowell/Documents/git/pluralsight-redux-starter/src/components/course/CoursesPage.js",
+		"/Users/gcrowell/Documents/git/pluralsight-redux-starter/src/components/course/CourseForm.js",
+		"/Users/gcrowell/Documents/git/pluralsight-redux-starter/src/actions/actionTypes.js",
+		"/Users/gcrowell/Documents/git/pluralsight-redux-starter/README.md",
+		"/Users/gcrowell/Documents/git/pluralsight-redux-starter/.editorconfig",
+		"/Users/gcrowell/Documents/git/pluralsight-redux-starter/src/actions/courseActions.js",
+		"/Users/gcrowell/Documents/git/pluralsight-redux-starter/src/reducers/courseReducer.js",
+		"/Users/gcrowell/Documents/git/pluralsight-redux-starter/src/reducers/initialState.js",
+		"/Users/gcrowell/Documents/git/pluralsight-redux-starter/src/reducers/authorReducer.js",
+		"/Users/gcrowell/Documents/git/pluralsight-redux-starter/src/reducers/index.js",
+		"/Users/gcrowell/Documents/git/pluralsight-redux-starter/src/actions/authorActions.js",
+		"/Users/gcrowell/Documents/git/pluralsight-redux-starter/src/components/App.js",
+		"/Users/gcrowell/Documents/git/pluralsight-redux-starter/src/index.js",
+		"/Users/gcrowell/Documents/git/psadmin/package-lock.json",
+		"/Users/gcrowell/Documents/git/psadmin/gulpfile.js",
+		"/Users/gcrowell/Documents/git/psadmin/npm_install.sh",
+		"/Users/gcrowell/Documents/docs/strong_opinions_weakly_held/scaling_etl_as_a_service.md",
+		"/Users/gcrowell/Documents/docs/dld_data_dictionary.xml",
+		"/Users/gcrowell/Documents/docs/DM-cheat-sheet/Makefile",
+		"/Users/gcrowell/Documents/docs/DM-cheat-sheet/readme.md",
+		"/Users/gcrowell/Documents/docs/notes/vantage_andrew_notes.md",
+		"/Users/gcrowell/Documents/docs/notes/DLD_shane_backend.md",
+		"/Users/gcrowell/Documents/docs/notes/DM-12933.md",
+		"/Users/gcrowell/Documents/docs/notes/notes.md",
+		"/Users/gcrowell/Documents/docs/notes/places.md",
+		"/Users/gcrowell/Documents/git/psadmin/react-flux-building-applications/2-react-flux-building-applications-m2-exercise-files/demos/after/eslint.config.json",
+		"/Users/gcrowell/Library/Application Support/Sublime Text 3/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
+		"/Users/gcrowell/foo.txt",
+		"/Users/gcrowell/Documents/git/tools/scripts/dld",
+		"/Users/gcrowell/.zshrc",
+		"/Users/gcrowell/Library/Application Support/Sublime Text 3/Packages/User/run_shell_script.sublime-build",
+		"/Users/gcrowell/Documents/hg/code_review_diffs/cae4i_DM-12902.diff",
+		"/Users/gcrowell/Documents/hg/deployment_RELEASE-20170721-VEYRON/clutils",
+		"/Users/gcrowell/Documents/hg/tools/SourceDataSql/test_data/caxxx/20170403/JIRA_Story.csv"
+	],
+	"find":
+	{
+		"height": 70.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"  ",
+			"CREATE_COURSES_SUCCESS",
+			"createCourseSuccess",
+			"updateCoursesSuccess",
+			"course",
+			"updateCourseState",
+			"row",
+			"SUCCESS",
+			"types",
+			"LOAD",
+			"Course",
+			"course",
+			"courses",
+			"COURSES",
+			"course",
+			"Reducer",
+			"COURSES",
+			"Course",
+			"course",
+			"Course",
+			"course"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 77.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 329.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "pluralsight-react.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Documents/hg/hg.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 294.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
